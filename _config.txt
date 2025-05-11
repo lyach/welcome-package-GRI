@@ -1,0 +1,3 @@
+title: Toronto GRI Interns Guide
+description: A comprehensive guide for Mitacs Globalink Research Internship students at the University of Toronto
+theme: jekyll-theme-cayman

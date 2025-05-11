@@ -1,0 +1,278 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #34495e;
+    --success-color: #2ecc71;
+    --warning-color: #f39c12;
+    --info-color: #3498db;
+    --section-spacing: 60px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7fa;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    background-image: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('https://upload.wikimedia.org/wikipedia/commons/7/7a/View_of_Toronto_Skyline_from_Toronto_Islands_Aug_2017.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+header .subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+/* Navigation */
+#navbar {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    z-index: 1000;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#navbar li {
+    margin: 0;
+}
+
+#navbar a {
+    display: inline-block;
+    padding: 15px 20px;
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+#navbar a:hover, #navbar a:active {
+    background-color: rgba(52, 152, 219, 0.1);
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+#navbar a i {
+    margin-right: 5px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + main {
+    padding-top: 60px;
+}
+
+/* Main Content */
+main {
+    padding: 40px 0;
+}
+
+.section {
+    margin-bottom: var(--section-spacing);
+    scroll-margin-top: 80px;
+}
+
+.section-content {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--light-color);
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.section h2 i {
+    margin-right: 10px;
+    color: var(--secondary-color);
+}
+
+/* Info Cards */
+.info-card {
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.info-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.info-card.alert {
+    border-left-color: var(--accent-color);
+    background-color: rgba(231, 76, 60, 0.1);
+}
+
+.info-card.steps {
+    border-left-color: var(--success-color);
+    background-color: rgba(46, 204, 113, 0.1);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn i {
+    margin-left: 5px;
+}
+
+/* Bucket List */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.bucket-card {
+    background-color: white;
+    border-radius: 6px;
+    padding: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bucket-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.bucket-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.bucket-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 60px 20px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    #navbar ul {
+        flex-wrap: nowrap;
+    }
+    
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 40px 20px;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section-content {
+        padding: 20px;
+    }
+    
+    .info-card {
+        padding: 15px;
+    }
+}
